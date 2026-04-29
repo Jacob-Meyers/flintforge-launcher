@@ -1,0 +1,84 @@
+{
+  "updateRMDIR": [
+	"resources"
+  ],
+  "updateRMFILE": [
+	"FlintforgeCPP.exe",
+	"FlintforgeCPP"
+  ],
+  "essentialDLL": {
+	"libwinpthread-1.dll": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flibwinpthread-1.dll%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+  },
+  "versions": {
+    "InDevp-9p": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-9p.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-9p.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-9": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-9.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-9.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-8": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-8.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-8.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-7": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-7.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-7.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-6": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-6.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-6.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-5": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-5.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-5.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-4": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-4.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-4.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-3": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-3.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-3.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-2t2": {
+		"requiresWine": true,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-2t2.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-2t2.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-2t0": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-2t0.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2FInDevp-2t0.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-1": {
+		"requiresWine": true,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-1.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-1.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"InDevp-0": {
+		"requiresWine": true,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-0.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2FInDevp-0.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"java-mpTest2": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2Fjava-mpTest2.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2Fjava-mpTest2.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	},
+	"java-mpTest1": {
+		"requiresWine": false,
+		"win": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Fwindows%2Fjava-mpTest1.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ",
+		"linux": "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2Flinux%2Fjava-mpTest1.zip%2F&hash=KCmam1tiiFGDu1a1V4mkQQ"
+	}
+  }
+}
