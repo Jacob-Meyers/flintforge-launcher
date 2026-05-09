@@ -11,6 +11,7 @@ import zipfile
 import subprocess
 import shutil
 import base64
+import math
 from io import BytesIO
 from tkinter import messagebox as mb
 
@@ -65,6 +66,24 @@ def get_install_directory():
     else:
         return home / ".local" / "share" / "Flintforge"
 
+def check_for_raylib():
+    if os.name != "nt":
+        file_path = get_install_directory() / "libraylib.so.550"
+        if file_path.is_file():
+            return
+        raylibreq = urllib.request.Request(
+            "https://jacobdrive.pnc3.net/public/api/resources/download?file=%2F&algo=tar.gz&hash=EWQyVNGWT5fRkI10ESGfUw&sessionId=qroL37qn",
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+            }
+        )
+        with urllib.request.urlopen(jsonreq) as raylibreq, open(file_path, 'wb') as out_file:
+            out_file.write(response.read())
+        try:
+            os.chmod(file_path, 0o755)
+        except Exception as e:
+            print(f"[WARNING] Failed to chmod binary: {e}")
+
 def selection_changed(event):
     selected_item = combo_box.get()
     selectedlabel.config(text=f"Selected Version: {selected_item}")
@@ -82,6 +101,8 @@ def clear_directory_contents(directory_path):
             shutil.rmtree(item)
 
 def launch_game(versionLocation, versionBinary, platform, version):
+    check_for_raylib()
+
     command = [versionBinary]
     if (platform == "linux" and data["versions"][version]["requiresWine"]):
         versionBinary = versionBinary + ".exe"
@@ -91,15 +112,19 @@ def launch_game(versionLocation, versionBinary, platform, version):
             print(f"Error: Program WINE is required for {versionBinary}")
             exit(1)
 
-    if not sys.platform.startswith("win"):
-        try:
-            os.chmod(versionBinary, 0o755)
-        except Exception as e:
-            print(f"[WARNING] Failed to chmod binary: {e}")
+    # if not sys.platform.startswith("win"):
+    #     try:
+    #         os.chmod(versionBinary, 0o755)
+    #     except Exception as e:
+    #         print(f"[WARNING] Failed to chmod binary: {e}")
 
     if sys.platform.startswith("win"):
         subprocess.Popen(command, cwd=versionLocation, creationflags=subprocess.CREATE_NEW_CONSOLE)
     else:
+        lib_dir = os.path.expanduser("~/.local/share/flintforge/lib")
+        env = os.environ.copy()
+        env["LD_LIBRARY_PATH"] = f"{lib_dir}:{env.get('LD_LIBRARY_PATH', '')}"
+
         os.chmod(versionBinary, 0o755)
 
         subprocess.Popen([
@@ -107,7 +132,7 @@ def launch_game(versionLocation, versionBinary, platform, version):
             "-cd", str(versionLocation),
             "-fn", "xft:Monospace:size=10",
             "-e", versionBinary
-        ])
+        ], cwd=versionLocation, env=env)
 
 def get_first_file_pathlib(directory_path, extension):
     if not extension.startswith('.'):
@@ -200,7 +225,9 @@ def on_button_click(version):
 
 root = tk.Tk()
 root.title("Flintforge Launcher")
-root.geometry("600x340")
+geo_x = str(math.ceil(root.winfo_screenwidth()/1920*600))
+geo_y = str(math.ceil(root.winfo_screenheight()/1080*340))
+root.geometry(geo_x + "x" + geo_y)
 
 bgColor = "#222222"
 style = ttk.Style()
